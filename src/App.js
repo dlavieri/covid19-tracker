@@ -7,6 +7,36 @@ import Selector from './components/selector/selector';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 
 const geoUrl = "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json"
+const defStyles = {
+  default: {
+    fill: "#ECEFF1",
+    stroke: "#607D8B",
+    strokeWidth: 0.75,
+    outline: "none",
+    transition: "fill 500ms ease-out"
+  },
+  hover: {
+    fill: "#7d26cd",
+    stroke: "#607D8B",
+    strokeWidth: 1,
+    outline: "none",
+  }
+};
+const activeStyles = {
+  default: {
+    fill: "red",
+    stroke: "#607D8B",
+    strokeWidth: 0.75,
+    outline: "none",
+    transition: "fill 500ms ease-out"
+  },
+  hover: {
+    fill: "#7d26cd",
+    stroke: "#607D8B",
+    strokeWidth: 1,
+    outline: "none",
+  }
+}
 
 
 class App extends Component {
@@ -100,27 +130,13 @@ class App extends Component {
               <Geographies geography={geoUrl}>
                 {({ geographies }) =>
                   geographies.map(geo => {
-                    let active;
-                    if (geo.properties.NAME === this.state.currentCountry) {active = true};
+                    let styles = defStyles;
+                    if (geo.properties.NAME === this.state.currentCountry) {styles = activeStyles};
                     return <Geography 
                       key={geo.rsmKey} 
                       geography={geo} 
                       onClick={() => this.selectCountry(geo.properties.NAME)}
-                      style={{
-                        default: {
-                          fill: "#ECEFF1",
-                          stroke: "#607D8B",
-                          strokeWidth: 0.75,
-                          outline: "none",
-                          transition: "fill 500ms ease-out"
-                        },
-                        hover: {
-                          fill: "#7d26cd",
-                          stroke: "#607D8B",
-                          strokeWidth: 1,
-                          outline: "none",
-                        }
-                    }}
+                      style={styles}
                       />
                   })
                 }
