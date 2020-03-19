@@ -61,6 +61,9 @@ class App extends Component {
   }
 
   selectCountry = (geo) => {
+    this.setState({
+      currentCountry: geo
+    }, console.log(this.state.currentCountry));
     this.getCountry(geo);
   }
 
@@ -93,10 +96,12 @@ class App extends Component {
             <Country data={countryStats} formatNums={this.formatNums} />
           </div>
           <div className="map">
-            <ComposableMap style={{marginTop: "-5%", marginBottom: "-8%", marginRight: "5%"}}>
+            <ComposableMap style={{marginTop: "-5%", marginBottom: "-20%", marginRight: "5%", maxWidth: "800px"}}>
               <Geographies geography={geoUrl}>
                 {({ geographies }) =>
                   geographies.map(geo => {
+                    let active;
+                    if (geo.properties.NAME === this.state.currentCountry) {active = true};
                     return <Geography 
                       key={geo.rsmKey} 
                       geography={geo} 
