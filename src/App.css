@@ -27,3 +27,6 @@
   align-items: center;
 }
 
+.active {
+  fill: red;
+}
