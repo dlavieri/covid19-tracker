@@ -1,0 +1,32 @@
+.global {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #7d26cd;
+    background-image: url('../../assets/banner.png');
+    background-position-y: center;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.global h2 {
+    margin-bottom: 5px;
+}
+
+.global .data {
+    display: flex;
+    width: 60%;
+    min-width: 300px;
+    justify-content: space-between;
+}
+
+.global .data > * {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.global .data .label {
+    font-weight: bold;
+}
