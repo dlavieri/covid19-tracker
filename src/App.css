@@ -19,7 +19,7 @@
 .sidebar {
   width: 30%;
   min-width: 220px;
-  padding-top: 5%;
+  padding-top: 2%;
   flex-grow: 1;
   background: linear-gradient(#460073,#7d26cd);
   display: flex;

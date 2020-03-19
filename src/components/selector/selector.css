@@ -32,3 +32,11 @@
     font-weight: bold;
     margin-top: 3px;
 }
+
+.selector .fa-chevron-down {
+    color: #777;
+    position: relative;
+    top: 25px;
+    left: 93%;
+    font-size: 0.6em;
+}

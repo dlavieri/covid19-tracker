@@ -4,7 +4,6 @@ import './country.css';
 const Country = props => {
     const { country, cases, deaths, todayCases, todayDeaths, recovered, casesPerMillion } = props.data;
     const { formatNums } = props;
-    console.log(props.data)
     if (country) {
     return (
         <div className="country">
