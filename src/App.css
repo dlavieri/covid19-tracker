@@ -13,6 +13,7 @@
   flex-grow: 1;
   display:flex;
   height: auto;
+  overflow: hidden;
 }
 .map {
   width: 100%;

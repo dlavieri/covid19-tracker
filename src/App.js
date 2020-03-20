@@ -126,7 +126,7 @@ class App extends Component {
             <Country data={countryStats} formatNums={this.formatNums} />
           </div>
           <div className="map">
-            <ComposableMap style={{marginTop: "-5%", marginBottom: "-20%", marginRight: "5%", maxWidth: "800px"}}>
+            <ComposableMap style={{marginTop: "-6%", marginBottom: "-20%", marginRight: "5%", maxWidth: "800px"}}>
               <Geographies geography={geoUrl}>
                 {({ geographies }) =>
                   geographies.map(geo => {
