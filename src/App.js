@@ -24,7 +24,7 @@ const defStyles = {
 };
 const activeStyles = {
   default: {
-    fill: "red",
+    fill: "#7d26cd",
     stroke: "#607D8B",
     strokeWidth: 0.75,
     outline: "none",
@@ -81,7 +81,10 @@ class App extends Component {
   getCountry = (country) => {
     if (country === "United States of America") { country = "USA"};
     if (country === "Dem. Rep. Congo") { country = "DRC"};
-    if (country === "United Kingdom") { country = "UK"}
+    if (country === "United Kingdom") { country = "UK"};
+    if (country === "South Korea") { country = "S. Korea"};
+    if (country === "Bosnia and Herz.") { country = "Bosnia and Herzegovina"};
+    if (country === "Macedonia") { country = "North Macedonia"};
     axios.get("https://coronavirus-19-api.herokuapp.com/countries/" + country)
       .then(stats => {
         this.setState({

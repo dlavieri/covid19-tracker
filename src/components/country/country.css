@@ -21,3 +21,17 @@
 .data .today {
     width: 100%;
 }
+
+@media only screen and (max-width: 700px) {
+    .country {
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+    .country .data{
+        flex-direction: row;
+        font-size: 0.9em;
+    }
+    .country .data > * > *{
+        margin: 0;
+    }
+}

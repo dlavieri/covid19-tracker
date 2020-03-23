@@ -33,3 +33,16 @@
 .active {
   fill: red;
 }
+
+@media only screen and (max-width: 700px) {
+  .body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-grow: 0;
+    padding-bottom: 10px;
+  }
+}
